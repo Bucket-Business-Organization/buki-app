@@ -8,7 +8,7 @@ class AuthService {
 
   Future<dynamic> join(String email, String nickname, String pw) async {
     final response = await http.post(
-      Uri.parse('$baseUrl/buki/join'),
+      Uri.parse('$baseUrl/buki/member/join'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -28,7 +28,7 @@ class AuthService {
 
   Future<dynamic> login(String email, String pw) async {
     final response = await http.post(
-      Uri.parse('$baseUrl/buki/login'),
+      Uri.parse('$baseUrl/buki/member/login'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
